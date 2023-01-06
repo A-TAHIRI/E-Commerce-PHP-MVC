@@ -6,7 +6,7 @@
 namespace App\Controller;
 
 use Core\Controller\Controller;
-
+use \App;
 
 class AppController extends Controller
 {
@@ -18,6 +18,11 @@ class AppController extends Controller
 
     {
 
-        $this->viewPath = ROOT . '/app/views/';
+        $this->viewPath = ROOT . '/app/Views/';
+    }
+    protected function  loadModel($model_name)
+    {
+        $this->$model_name = App::getInstance()->getTable('Article');
+        $this->$model_name = App::getInstance()->getTable('Categorie');
     }
 }

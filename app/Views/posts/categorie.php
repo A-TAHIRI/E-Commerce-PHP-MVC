@@ -1,21 +1,3 @@
-<?php
-
-$app = App::getInstance();
-
-
-$categorie = $app->getTable('Categorie')->find($_GET['id']);
-if ($categorie === false) {
-    $app->notFound();
-}
-
-
-$articles = $app->getTable('Article')->lastByCategorie($_GET['id']);
-$categories = $app->getTable('Categorie')->all();
-// App::setTitle($categorie->nom_Categorie);
-?>
-
-
-
 <h2><?= $categorie->nom_Categorie ?></br></h2>
 
 <div class=" divfieldset container-fluid">

@@ -49,11 +49,7 @@ class App
         return $this->db_instance;
     }
 
-    public static function notFound()
-    {
-        header("HTTP/1.0 4004 Not Found");
-        header('location:index.php?p=404');
-    }
+
     public static function getTitle()
     {
         return self::$title;
@@ -64,10 +60,4 @@ class App
     }
 
     /**********************bac end */
-
-    public function forbidden()
-    {
-        header('HTTP/1.0 403 Forbidden');
-        die('Acces intedit');
-    }
 }
