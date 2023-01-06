@@ -1,4 +1,7 @@
 <?php
+
+use App\Controller\ArticlesController;
+
 define('ROOT', dirname(__DIR__));
 
 require ROOT . '/app/App.php';
@@ -15,20 +18,19 @@ if (isset($_GET['p'])) {
 
 
 
-ob_start();
-if ($page === 'home') {
 
-    require   ROOT . '/pages/posts/home.php';
+if ($page === 'home') {
+    $controller = new ArticlesController;
+    $controller->index();
 } elseif ($page === 'posts.article') {
-    require ROOT . '/pages/posts/article.php';
+    $controller = new ArticlesController;
+    $controller->article();
 } elseif ($page === 'posts.categorie') {
-    require ROOT . '/pages/posts/categorie.php';
+    $controller = new ArticlesController;
+    $controller->categorie();
 } elseif ($page === 'login') {
-    require ROOT . '/pages/users/login.php';
+    $controller = new UsersController;
+    $controller->login();
 } elseif ($page === '404') {
     require  ROOT . '/pages/posts/not_found.php';
 }
-
-
-$content = ob_get_clean();
-require ROOT . '/pages/templates/default.php';
