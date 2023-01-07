@@ -8,7 +8,7 @@ use Core\Controller\Controller;
 
 
 
-class ArticlesController extends AppController
+class PostsController extends AppController
 
 {
     public function __construct()

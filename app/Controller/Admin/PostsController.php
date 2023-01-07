@@ -6,7 +6,7 @@ namespace App\Controller\Admin;
 
 
 
-class ArticlesController extends AppController
+class PostsController extends AppController
 
 {
 
@@ -14,11 +14,14 @@ class ArticlesController extends AppController
     {
         parent::__construct();
         $this->loadModel('Article');
+        $this->loadModel('Categorie');
     }
     public function index()
+
     {
+        $categories = $this->Categorie->all();
         $articles = $this->Article->all();
-        $this->render('admin.posts.index', compact('articles'));
+        $this->render('admin.posts.index', compact('articles', 'categories'));
     }
 
 
@@ -52,8 +55,10 @@ class ArticlesController extends AppController
 
         $this->loadModel('Categorie');
         $categories = $this->Categorie->extract('id', 'nom_Categorie');
+
         $form = new \Core\HTML\BootstrapForm($_POST);
-        $this->rende('admin.post.add', compact('categories', 'form'));
+
+        $this->render('admin.posts.add', compact('categories',  'form'));
     }
 
 
@@ -91,8 +96,9 @@ class ArticlesController extends AppController
         $post = $this->Article->find($_GET['id']);
         $this->loadModel('Categorie');
         $categories = $this->Categorie->extract('id', 'nom_Categorie');
+
         $form = new \Core\HTML\BootstrapForm($post);
-        $this->rende('admin.post.edit', compact('categories', 'form'));
+        $this->render('admin.posts.edit', compact('categories', 'form'));
     }
     public function delete()
     {

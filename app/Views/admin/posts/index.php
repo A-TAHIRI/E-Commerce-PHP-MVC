@@ -1,7 +1,7 @@
-<a class="btn btn-info" href="admin.php?p=home">Administrer les articles</a> <a class="btn btn-info" href="admin.php?p=categories.index">Administrer les categories</a>
+<a class="btn btn-info" href="index.php?p=admin.posts.index">Administrer les articles</a> <a class="btn btn-info" href="index.php?p=admin.categories.index">Administrer les categories</a>
 <h1>Administrer les articles</h1>
 
-<p><a href="?p=posts.add" class="btn btn-success">Ajouter</a></p>
+<p><a href="?p=admin.posts.add" class="btn btn-success">Ajouter</a></p>
 <table class="table">
 
     <thead>
@@ -46,10 +46,10 @@
 
 
                 <td>
-                    <a href="?p=posts.edit&id=<?= $article->id; ?>" class="btn btn-primary">Editer</a>
-                    <form action="?p=posts.delete" method="post" style="display : inline-block">
+                    <a href="?p=admin.posts.edit&id=<?= $article->id; ?>" class="btn btn-primary">Editer</a>
+                    <form action="?p=admin.posts.delete" method="post" style="display : inline-block">
                         <input type="hidden" name="id" value="<?= $article->id; ?>">
-                        <button type="submit" href="?p=posts.delete&id=<?= $article->id; ?>" class="btn btn-danger">Supprimer</button>
+                        <button type="submit" href="?p=admin.posts.delete&id=<?= $article->id; ?>" class="btn btn-danger">Supprimer</button>
                     </form>
 
 

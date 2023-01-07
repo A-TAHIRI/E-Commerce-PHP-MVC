@@ -1,5 +1,5 @@
 <form method="post">
-    <h1>Modifier l'article</h1>
+    <h1>Ajouter l'article</h1>
 
     <?= $form->input('nom_Article', 'Titre '); ?>
     <?= $form->input('Quantité', 'Quantité '); ?>
