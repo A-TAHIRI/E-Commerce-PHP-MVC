@@ -35,9 +35,10 @@ class ArticlesController extends AppController
 
     public function article()
     {
+        $categories = $this->Categorie->all();
+        $article = $this->Article->findWithCategory($_GET['id']);
+        $this->render('posts.article', compact('article', 'categories'));
     }
-
-
 
 
 
@@ -47,7 +48,7 @@ class ArticlesController extends AppController
 
 
 
-        $categorie = $this->Article->find($_GET['id']);
+        $categorie = $this->Categorie->find($_GET['id']);
         if ($categorie === false) {
             $this->notFound();
         }
@@ -56,7 +57,7 @@ class ArticlesController extends AppController
         $articles = $this->Article->lastByCategorie($_GET['id']);
         $categories = $this->Categorie->all();
         // App::setTitle($categorie->nom_Categorie);
-        $this->render('posts.article', compact('articles', 'categories', 'categorie'));
+        $this->render('posts.categorie', compact('articles', 'categories', 'categorie'));
     }
 
     public function login()

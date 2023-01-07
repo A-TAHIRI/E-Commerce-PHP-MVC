@@ -17,11 +17,7 @@ if (isset($_GET['p'])) {
     $page = 'home';
 }
 
-$app = App::getInstance();
-$auth = new DbAuth($app->getDb());
-if (!$auth->logged()) {
-    $app->forbidden();
-}
+
 
 
 ob_start();

@@ -22,7 +22,6 @@ class AppController extends Controller
     }
     protected function  loadModel($model_name)
     {
-        $this->$model_name = App::getInstance()->getTable('Article');
-        $this->$model_name = App::getInstance()->getTable('Categorie');
+        $this->$model_name = App::getInstance()->getTable($model_name);
     }
 }

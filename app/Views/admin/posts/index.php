@@ -1,8 +1,3 @@
-<?php
-$posts = App::getInstance()->getTable('Article')->all();
-
-
-?>
 <a class="btn btn-info" href="admin.php?p=home">Administrer les articles</a> <a class="btn btn-info" href="admin.php?p=categories.index">Administrer les categories</a>
 <h1>Administrer les articles</h1>
 
@@ -29,32 +24,32 @@ $posts = App::getInstance()->getTable('Article')->all();
 
     <tbody>
 
-        <?php foreach ($posts as $post) : ?>
+        <?php foreach ($articles as $article) : ?>
             <tr>
                 <td>
-                    <?= $post->id; ?>
+                    <?= $article->id; ?>
                 </td>
                 <td>
-                    <?= $post->nom_Article; ?>
+                    <?= $article->nom_Article; ?>
                 </td>
                 <td>
-                    <?= $post->Quantité; ?>
+                    <?= $article->Quantité; ?>
                 </td>
                 <td>
-                    <?= $post->description_Article; ?>
+                    <?= $article->description_Article; ?>
                 </td>
                 <td>
-                    <?= $post->prix_Article; ?>
+                    <?= $article->prix_Article; ?>
                 </td>
-                <td><img src="<?= $post->image1_Article ?>" width="100" height="100" alt=""></td>
-                <td><img src="<?= $post->image2_Article ?>" width="100" height="100" alt=""></td>
+                <td><img src="<?= $article->image1_Article ?>" width="100" height="100" alt=""></td>
+                <td><img src="<?= $article->image2_Article ?>" width="100" height="100" alt=""></td>
 
 
                 <td>
-                    <a href="?p=posts.edit&id=<?= $post->id; ?>" class="btn btn-primary">Editer</a>
+                    <a href="?p=posts.edit&id=<?= $article->id; ?>" class="btn btn-primary">Editer</a>
                     <form action="?p=posts.delete" method="post" style="display : inline-block">
-                        <input type="hidden" name="id" value="<?= $post->id; ?>">
-                        <button type="submit" href="?p=posts.delete&id=<?= $post->id; ?>" class="btn btn-danger">Supprimer</button>
+                        <input type="hidden" name="id" value="<?= $article->id; ?>">
+                        <button type="submit" href="?p=posts.delete&id=<?= $article->id; ?>" class="btn btn-danger">Supprimer</button>
                     </form>
 
 

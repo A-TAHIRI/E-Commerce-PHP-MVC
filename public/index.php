@@ -20,17 +20,20 @@ if (isset($_GET['p'])) {
 
 
 if ($page === 'home') {
-    $controller = new ArticlesController;
+    $controller = new ArticlesController();
     $controller->index();
 } elseif ($page === 'posts.article') {
-    $controller = new ArticlesController;
+    $controller = new ArticlesController();
     $controller->article();
 } elseif ($page === 'posts.categorie') {
-    $controller = new ArticlesController;
+    $controller = new ArticlesController();
     $controller->categorie();
 } elseif ($page === 'login') {
-    $controller = new UsersController;
+    $controller = new \App\Controller\UsersController();
     $controller->login();
 } elseif ($page === '404') {
     require  ROOT . '/pages/posts/not_found.php';
+} elseif ($page === 'admin.posts.index') {
+    $controller = new \App\Controller\Admin\ArticlesController;
+    $controller->index();
 }
