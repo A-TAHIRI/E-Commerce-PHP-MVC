@@ -58,7 +58,7 @@ class PostsController extends AppController
 
         $form = new \Core\HTML\BootstrapForm($_POST);
 
-        $this->render('admin.posts.add', compact('categories',  'form'));
+        $this->render('admin.posts.add', compact('categories', 'form'));
     }
 
 
