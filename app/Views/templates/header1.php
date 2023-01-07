@@ -115,7 +115,7 @@
 
 
 
-        foreach ($categories as $categorie) : ?>
+        foreach (($categories = $items) as $categorie) : ?>
             <div class="col"><a href="<?= $categorie->url ?>">
                     <img src="<?= $categorie->image_Categorie ?>" alt="<?= $categorie->nom_Categorie ?>" width="50" height="50">
                     </br> <?= $categorie->nom_Categorie ?></a></div>

@@ -19,9 +19,9 @@ class PostsController extends AppController
     public function index()
 
     {
-        $categories = $this->Categorie->all();
+        $items = $this->Categorie->all();
         $articles = $this->Article->all();
-        $this->render('admin.posts.index', compact('articles', 'categories'));
+        $this->render('admin.posts.index', compact('articles', 'items'));
     }
 
 
@@ -55,10 +55,10 @@ class PostsController extends AppController
 
         $this->loadModel('Categorie');
         $categories = $this->Categorie->extract('id', 'nom_Categorie');
-
+        $items = $this->Categorie->all();
         $form = new \Core\HTML\BootstrapForm($_POST);
 
-        $this->render('admin.posts.add', compact('categories', 'form'));
+        $this->render('admin.posts.add', compact('categories', 'items', 'form'));
     }
 
 
@@ -96,9 +96,10 @@ class PostsController extends AppController
         $post = $this->Article->find($_GET['id']);
         $this->loadModel('Categorie');
         $categories = $this->Categorie->extract('id', 'nom_Categorie');
+        $items = $this->Categorie->all();
 
         $form = new \Core\HTML\BootstrapForm($post);
-        $this->render('admin.posts.edit', compact('categories', 'form'));
+        $this->render('admin.posts.edit', compact('categories', 'items', 'form'));
     }
     public function delete()
     {

@@ -32,7 +32,7 @@ if ($page === 'home') {
     $controller = new PostsController();
     $controller->categorie();
 } elseif ($page === 'login') {
-    $controller = new UsersContrller();
+    $controller = new UsersController();
     $controller->login();
 } elseif ($page === '404') {
     require  ROOT . '/pages/posts/not_found.php';

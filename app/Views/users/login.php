@@ -6,10 +6,6 @@
     </div>
 
 <?php endif; ?>
-
-
-
-
 <form method=post>
     <fieldset>
         <img src="images/admin.png" width="100" height="100" alt=" ">

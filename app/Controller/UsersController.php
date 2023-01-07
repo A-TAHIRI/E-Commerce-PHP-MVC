@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
-use Core\Auth\DbAuth;
-use  Core\HTML\BootstrapForm;
+
+
+
 use \App;
 
 
 
 
-class UsersContrller extends AppController
+class UsersController extends AppController
 {
     public function __construct()
     {
@@ -24,7 +25,7 @@ class UsersContrller extends AppController
         $errors = false;
 
         if (!empty($_POST)) {
-            $auth = new DbAuth(App::getInstance()->getDb());
+            $auth = new \Core\Auth\DbAuth(App::getInstance()->getDb());
             if ($auth->login($_POST['pseudo_Client'], $_POST['pass_Client'])) {
                 header('location:index.php?p=admin.posts.index');
             } else {
@@ -33,7 +34,7 @@ class UsersContrller extends AppController
         }
         $categories = $this->Categorie->all();
 
-        $form = new BootstrapForm($_POST);
+        $form = new  \Core\HTML\BootstrapForm($_POST);
         $this->render('users.login', compact('form', 'categories', 'errors'));
     }
 }
