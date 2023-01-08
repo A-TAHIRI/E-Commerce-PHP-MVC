@@ -61,7 +61,7 @@ class Table
     public function delete($id)
     {
 
-        return $this->query("DELETE  {$this->table}  WHERE id = ?", [$id], true);
+        return $this->query("DELETE FROM {$this->table}  WHERE id = ?", [$id], true);
     }
     public function extract($key, $value)
     {

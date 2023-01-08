@@ -99,7 +99,7 @@ class PostsController extends AppController
         $items = $this->Categorie->all();
 
         $form = new \Core\HTML\BootstrapForm($post);
-        $this->render('admin.posts.edit', compact('categories', 'items', 'form'));
+        $this->render('admin.posts.edit', compact('categories', 'items', 'form', 'post'));
     }
     public function delete()
     {
