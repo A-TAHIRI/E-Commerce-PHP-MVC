@@ -32,9 +32,9 @@ class UsersController extends AppController
                 $errors = true;
             }
         }
-        $categories = $this->Categorie->all();
+        $items = $this->Categorie->all();
 
         $form = new  \Core\HTML\BootstrapForm($_POST);
-        $this->render('users.login', compact('form', 'categories', 'errors'));
+        $this->render('users.login', compact('form', 'items', 'errors'));
     }
 }

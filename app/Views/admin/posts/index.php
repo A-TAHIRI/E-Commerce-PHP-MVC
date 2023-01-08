@@ -41,8 +41,8 @@
                 <td>
                     <?= $article->prix_Article; ?>
                 </td>
-                <td><img src="<?= $article->image1_Article ?>" width="100" height="100" alt=""></td>
-                <td><img src="<?= $article->image2_Article ?>" width="100" height="100" alt=""></td>
+                <td><img src="images/<?= $article->image1_Article ?>" width="100" height="100" alt=""></td>
+                <td><img src="images/<?= $article->image2_Article ?>" width="100" height="100" alt=""></td>
 
 
                 <td>
