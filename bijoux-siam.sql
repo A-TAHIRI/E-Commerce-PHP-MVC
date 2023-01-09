@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 09 jan. 2023 à 15:07
+-- Généré le : lun. 09 jan. 2023 à 15:24
 -- Version du serveur : 8.0.27
 -- Version de PHP : 7.4.26
 
@@ -98,8 +98,7 @@ INSERT INTO `categories` (`id`, `nom_Categorie`, `image_Categorie`) VALUES
 (3, 'Bracelet', 'f3.png'),
 (4, 'Bague', 'f4.png'),
 (5, 'B.cheville', 'f5.png'),
-(6, 'Montre', 'Montere.png'),
-(7, 'Collier', 'f1.png');
+(6, 'Montre', 'Montere.png');
 
 -- --------------------------------------------------------
 
