@@ -2,6 +2,10 @@
 
 <form method=post>
     <fieldset>
+        <div class="mb-3">
+            <label class="form-label">IdArticle</label>
+            <input type="text" name="id" id="disabledTextInput" class="form-control">
+        </div>
 
         <div class="mb-3">
             <label class="form-label">Titre</label>
