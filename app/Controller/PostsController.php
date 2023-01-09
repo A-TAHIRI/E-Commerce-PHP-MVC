@@ -39,6 +39,10 @@ class PostsController extends AppController
         $items = $this->Categorie->all();
         $categories = $this->Categorie->all();
         $article = $this->Article->findWithCategory($_GET['id']);
+        if ($article === false) {
+            $this->notFound();
+        }
+
         $this->render('posts.article', compact('article', 'categories', 'items'));
     }
 
@@ -62,7 +66,12 @@ class PostsController extends AppController
         $this->render('posts.categorie', compact('articles', 'categories', 'categorie', 'items'));
     }
 
-    public function login()
+
+    public function notF()
     {
+
+        $items = $this->Categorie->all();
+
+        $this->render('posts.not_found', compact('items'));
     }
 }

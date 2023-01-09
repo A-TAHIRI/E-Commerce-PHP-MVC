@@ -35,7 +35,8 @@ if ($page === 'home') {
     $controller = new UsersController();
     $controller->login();
 } elseif ($page === '404') {
-    require  ROOT . '/pages/posts/not_found.php';
+    $controller = new PostsController();
+    $controller->notF();
 } elseif ($page === 'admin.posts.index') {
     $controller = new \App\Controller\Admin\PostsController();
     $controller->index();
