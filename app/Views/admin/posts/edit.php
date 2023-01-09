@@ -1,4 +1,4 @@
-<h1>Modifier l'article</h1>
+<h1>Modifier l'article</h1> <a href="index.php?p=admin.posts.index" class="btn btn-warning   button">Retourner à l'accueil</a>
 
 <form method=post>
     <fieldset>

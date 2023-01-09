@@ -45,8 +45,9 @@ class CategoriesController extends AppController
             return $this->index();
         }
         $categories = $this->Categorie->all();
+        $items = $this->Categorie->all();
         $form = new \Core\HTML\BootstrapForm($_POST);
-        $this->render('admin.categories.add', compact('form', 'categories'));
+        $this->render('admin.categories.add', compact('form', 'categories', 'items'));
     }
 
 
@@ -76,9 +77,10 @@ class CategoriesController extends AppController
 
 
         $categorie = $this->Categorie->find($_GET['id']);
+        $items = $this->Categorie->all();
         $categories = $this->Categorie->all();
         $form = new \Core\HTML\BootstrapForm($categorie);
-        $this->render('admin.categories.edit', compact('form', 'categories'));
+        $this->render('admin.categories.edit', compact('form', 'categories', 'items'));
     }
     public function delete()
     {
