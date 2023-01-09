@@ -12,7 +12,7 @@
         <legend>Se connecter</legend>
         <div class="mb-3">
             <label class="form-label">Pseudo</label>
-            <input type="text" name="pseudo_Client" id="disabledTextInput" class="form-control" placeholder="Entrez votre pseudo" required>
+            <input type="text" name="pseudo_Client" id="disabledTextInput" class="form-control" placeholder="Entrez votre pseudo">
         </div>
         <div class="mb-3">
             <label class="form-label">Mot de passe</label>
