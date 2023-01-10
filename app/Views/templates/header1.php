@@ -13,7 +13,7 @@
                 <div class="offcanvas-body ">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php?p=home"><b>Acceuil</b></a>
+                            <a class="nav-link active" aria-current="page" href="index.php?p=posts.index"><b>Acceuil</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><b>Cartes Cadeaux</b></a>
@@ -53,7 +53,7 @@
                     <div class="conn">
                         <ul>
                             <li>
-                                <a class="connecte" href="index.php?p=login">Se connecte</a>
+                                <a class="connecte" href="index.php?p=users.login">Se connecte</a>
                             </li>
                             <li>
                                 <a class="connecte" href="#">Créer un compte</a>

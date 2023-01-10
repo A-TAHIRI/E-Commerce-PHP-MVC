@@ -2,42 +2,55 @@
 <h1>Administrer les categories</h1>
 
 <p><a href="?p=admin.categories.add" class="btn btn-success">Ajouter</a></p>
-<table class="table">
+<fieldset>
 
-    <thead>
-        <tr>
+    <table class="table">
 
-            <td>ID</td>
-            <td>Titre</td>
-            <td>Image</td>
-            <td>Actions</td>
-
-        </tr>
-
-    </thead>
-
-    <tbody>
-
-        <?php foreach ($items as $categorie) : ?>
+        <thead>
             <tr>
-                <td>
-                    <?= $categorie->id; ?>
-                </td>
-                <td>
-                    <?= $categorie->nom_Categorie; ?>
-                </td>
-                <td><img src="images/<?= $categorie->image_Categorie ?>" width="100" height="100" alt=""></td>
 
-                <td>
-                    <a href="?p=admin.categories.edit&id=<?= $categorie->id; ?>" class="btn btn-primary">Editer</a>
-                    <form action="?p=admin.categories.delete" method="post" style="display : inline-block">
-                        <input type="hidden" name="id" value="<?= $categorie->id; ?>">
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                    </form>
-                </td>
+                <td>ID</td>
+                <td>Titre</td>
+                <td>Image</td>
+                <td>Actions</td>
 
             </tr>
 
-        <?php endforeach; ?>
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+
+            <?php foreach ($items as $categorie) : ?>
+                <tr>
+                    <td>
+                        <?= $categorie->id; ?>
+                    </td>
+                    <td>
+                        <?= $categorie->nom_Categorie; ?>
+                    </td>
+                    <td><img src="images/<?= $categorie->image_Categorie ?>" width="100" height="100" alt=""></td>
+
+                    <td>
+                        <a href="?p=admin.categories.edit&id=<?= $categorie->id; ?>" class="btn btn-primary">Editer</a>
+                        <form action="?p=admin.categories.delete" method="post" style="display : inline-block">
+                            <input type="hidden" name="id" value="<?= $categorie->id; ?>">
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+
+                </tr>
+
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+ </fieldset>
+
+ <style>
+
+
+.fieldset{
+
+  
+    border-radius: 10px;
+}
+ </style>

@@ -2,12 +2,13 @@
 <h1>Administrer les articles</h1>
 
 <p><a href="?p=admin.posts.add" class="btn btn-success">Ajouter</a></p>
-<table class="table">
+<fieldset>
+<table class="table"  >
 
-    <thead>
+    <thead  >
         <tr>
 
-            <td>ID</td>
+            <td >ID</td>
             <td>Titre</td>
             <td>Quantité</td>
             <td>Description</td>
@@ -22,7 +23,7 @@
 
     </thead>
 
-    <tbody>
+    <tbody  >
 
         <?php foreach ($articles as $article) : ?>
             <tr>
@@ -41,8 +42,8 @@
                 <td>
                     <?= $article->prix_Article; ?>
                 </td>
-                <td><img src="images/<?= $article->image1_Article ?>" width="100" height="100" alt=""></td>
-                <td><img src="images/<?= $article->image2_Article ?>" width="100" height="100" alt=""></td>
+                <td ><img src="images/<?= $article->image1_Article ?>" width="100" height="100" alt=""></td>
+                <td  ><img src="images/<?= $article->image2_Article ?>" width="100" height="100" alt=""></td>
 
 
                 <td>
@@ -61,3 +62,15 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+</fieldset>
+
+
+<style>
+
+
+.fieldset{
+
+    
+    border-radius: 10px;
+}
+ </style>

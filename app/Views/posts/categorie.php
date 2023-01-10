@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<a href="index.php?p=home" class="btn btn-warning button">Retourner à l'accueil</a>
+<a href="index.php?p=posts.index" class="btn btn-warning button">Retourner à l'accueil</a>
 <style>
     a.button {
         margin: 20px;

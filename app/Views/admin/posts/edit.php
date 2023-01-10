@@ -28,7 +28,7 @@
             <input type="file" name="image2_Article" id="disabledTextInput" value="<?= $post->image2_Article ?>" class="form-control" required>
         </div>
         <?= $form->select('id_categories', 'Catégorie ', $categories); ?>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">Confirmer</button>
 
     </fieldset>
 </form>
