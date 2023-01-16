@@ -77,6 +77,7 @@ class PostsController extends AppController
 
 
                 [
+                    'id' => $_POST['id'],
                     'nom_Article' => $_POST['nom_Article'],
                     'Quantité' => $_POST['Quantité'],
                     'description_Article' => $_POST['description_Article'],
